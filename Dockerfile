@@ -11,4 +11,4 @@ COPY app/ /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 5. 실행 명령어 설정
-CMD ["python", "main.py"]
+CMD ["python","main.py"]
