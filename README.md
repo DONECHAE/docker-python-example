@@ -11,10 +11,3 @@ docker build -t python-docker
 
 docker run --rm python-docker
 
-docker-python-example/
-│── app/
-│   ├── main.py         # 실행할 파이썬 코드
-│   ├── requirements.txt # 필요한 패키지 목록
-│── Dockerfile           # 도커 이미지 빌드 설정
-│── .gitignore           # 깃허브에 올리지 않을 파일
-│── README.md            # 실행 방법 가이드
