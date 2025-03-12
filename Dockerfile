@@ -1,14 +1,15 @@
-# 1. 기본 이미지 (Python 3.9 사용)
+# 1. Python 3.9 기반 이미지 사용
 FROM python:3.9
 
 # 2. 작업 디렉토리 설정
 WORKDIR /app
 
 # 3. 필요한 파일 복사
+COPY requirements.txt /app/requirements.txt
 COPY app/ /app/
 
-# 4. 패키지 설치
-RUN pip install --no-cache-dir -r requirements.txt
+# 4. 최신 pip로 업데이트 및 패키지 설치
+RUN pip install --upgrade pip && pip install --no-cache-dir -r /app/requirements.txt  
 
-# 5. 실행 명령어 설정
-CMD ["python","main.py"]
+# "main.py"
+CMD ["python"]
